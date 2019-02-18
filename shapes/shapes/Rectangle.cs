@@ -19,6 +19,7 @@ namespace shapes
 
         public double CalculateArea()
         {
+           
             double area;
             area = Length * Width;
             return area;
