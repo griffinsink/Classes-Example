@@ -10,22 +10,21 @@ namespace loops2
     {
         static void Main(string[] args)
         {
-            double examScore;
-            double totalScore = 0;
+            double grade;
+            double total = 0;
             double average;
             string response;
-            int count = 0;
-
+            int count=0;
 
             do
             {
-                Console.WriteLine("Please enter your exam score: ");
-                examScore = Convert.ToInt32(Console.ReadLine());
-                totalScore = totalScore + examScore;
+                Console.WriteLine("Please enter exam grade: ");
+                grade = Convert.ToInt32(Console.ReadLine());
+                total = total + grade;
                 count++;
 
                 start:
-                Console.WriteLine("Do you have another score you wish to enter?");
+                Console.WriteLine("Do you have another exam grade you would like to enter?");
                 response = Console.ReadLine().ToLower();
 
                 if (response == "yes")
@@ -34,16 +33,17 @@ namespace loops2
                 }
                 else if (response == "no")
                 {
-                    Console.WriteLine("Thank you!");
+                    Console.WriteLine("thank you");
                 }
-                else if (response != "yes" || response != "no")
+                else
                 {
                     Console.WriteLine("Please enter yes or no");
                     goto start;
                 }
-            } while (response == "yes" && response != "yes" || response != "no");
 
-            average = totalScore / count;
+            } while (response == "yes");
+
+            average = total / count;
 
             Console.WriteLine(average);
 

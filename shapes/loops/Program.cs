@@ -10,21 +10,20 @@ namespace loops
     {
         static void Main(string[] args)
         {
-            double score;
-            double totalScore = 0;
+            double grade;
+            double total = 0;
             double average;
 
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine("Please enter exam grade: ");
-                score = Convert.ToInt32(Console.ReadLine());
-                totalScore = totalScore + score;
+                grade = Convert.ToInt32(Console.ReadLine());
+                total = total + grade;
             }
 
-            average = totalScore / 3;
+            average = (total / 3) / 100;
 
-            Console.WriteLine($"average exam score is: {average}");
-
+            Console.WriteLine($"The average grade for the 3 exams is {average:P2}");
             Console.ReadKey();
         }
     }
